@@ -1,0 +1,138 @@
+/*
+Theme Name: Origin
+Theme URI: 
+Author: BCI.
+Author URI: http://www.bci-jp.co.jp
+Description: theme of Origin
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: origin
+Tags:
+*/
+
+@charset "utf-8";
+
+.site-header {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.site-title,
+h1.site-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 2rem;
+}
+
+.menu-toggle {
+  position: absolute;
+  top: 0;
+  right: 2%;
+}
+
+#primary-menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media only screen and (max-width: 767px) {
+  #primary-menu {
+    display: none;
+  }
+}
+
+@media print, screen and (min-width: 768px) {
+  .site-branding {
+    display: inline-block;  
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  .site-navigation {
+    float: right;
+    text-align: right;
+  }
+
+  #primary-menu {
+    display: block !important;
+  }
+
+  #primary-menu li {
+    display: inline-block;
+    padding-left: 1em;
+  }
+}
+
+.breadcrumbs ol {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+.breadcrumbs li {
+  display: inline-block;
+}
+
+.breadcrumbs li::before {
+  content: "\f105";
+  font-family: "FontAwesome";
+  padding-right: 0.5em;
+  padding-left: 0.5em;
+}
+
+.breadcrumbs li:first-child::before {
+  content: none;
+  padding: 0;
+}
+
+.pagination-outer ul,
+#wp_page_numbers ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.pagination-outer li,
+#wp_page_numbers li {
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+.pagination-outer li a,
+#wp_page_numbers li a {
+  padding: 0.5rem;
+  border: 1px solid #999;
+  background-color: #999;
+  color: #fff;
+  text-decoration: none;
+}
+
+.pagination-outer li a.prev::before,
+#wp_page_numbers li.paginate:first-child a::before {
+  content: "\f0d9";
+  font-family: "FontAwesome";
+  padding-right: 0.5em;
+}
+
+.pagination-outer li a.next::after,
+#wp_page_numbers li.paginate:last-child a::after {
+  content: "\f0da";
+  font-family: "FontAwesome";
+  padding-left: 0.5em;
+}
+
+.pagination-outer li.active a,
+#wp_page_numbers li.active_page a {
+  background-color: #fff;
+  color: #333;
+}
+
+#wp_page_numbers li.page_info {
+  display: none;
+}
+
+

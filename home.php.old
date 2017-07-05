@@ -1,0 +1,50 @@
+<?php get_header(); ?>
+
+<div class="home-slide">
+  <div class="home-slide-item">
+    <img src="<?php echo get_template_directory_uri(); ?>/images/home-primary.jpg" alt="">
+  </div>
+</div>
+
+<div class="content-area">
+  <main class="site-main" role="main">
+
+    <div class="home-primary">
+      <div class="container">
+        <h2 class="home-heading">ニュース</h2>
+
+        <div class="home-news row gutters">
+<?php if (have_posts()) : ?>
+  <?php while (have_posts()) : the_post();  /* pre_get_posts でクエリ変更済み */ ?>
+          <?php get_template_part('template-parts/news-item'); ?>
+  <?php endwhile; ?>
+<?php endif; ?>
+        </div><!-- /.home-news -->
+        <div class="news-archive-link"><a href="<?php echo esc_url(home_url('/news/')); ?>">ニュース一覧</a></div>
+      </div><!-- /.container -->
+    </div><!-- /.home-primary -->
+
+    <div class="home-secondary">
+      <div class="container">
+        <div class="home-widget home-next-match">
+          <h2 class="home-widget-title">次節予定</h2>
+          <img src="//placehold.it/600x315" alt="">
+        </div>
+
+        <div class="home-widget home-result">
+          <h2 class="home-widget-title">試合結果</h2>
+          <img src="//placehold.it/600x315" alt="">
+        </div>
+
+        <div class="home-widget home-standings">
+          <h2 class="home-widget-title">KSL1部 順位表</h2>
+          <img src="//placehold.it/600x1200" alt="">
+        </div>
+      </div><!-- /.container -->
+    </div>
+  </div>
+
+  </main>
+</div><!-- /.content-area -->
+
+<?php get_footer(); ?>

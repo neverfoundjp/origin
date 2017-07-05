@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+@import url("./libs/css/normalize.min.css");
+@import url("./libs/css/common.css");
+@import url("./style.css");
+
+#tinymce.wp-editor {
+  max-width: 40em;
+  padding-left: 1em !important;
+  background-color: #fff;
+}
